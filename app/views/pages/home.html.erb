@@ -1,7 +1,8 @@
-<h1>Pages#home</h1>
 <% if current_user %>
+  <%= render 'pages/user' %>
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %> 
 <% else %>
+<h1>Pages#home</h1>
   <%= link_to "Sign in", user_session_path %>
   <%= link_to "Sign up", new_user_session_path %>
 <% end %>
